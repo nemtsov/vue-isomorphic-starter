@@ -68,11 +68,14 @@
     "babel-eslint": "^7.2.3",
     "babel-istanbul": "^0.12.2",
     "eslint": "^3.19.0",
+    "memory-fs": "^0.4.1",
     "mocha": "^3.4.2",
     "nodemon": "^1.11.0",
     "proxyquire": "^1.8.0",
     "require-directory": "^2.1.1",
     "should": "^11.2.1",
-    "sinon": "^2.3.2"
+    "sinon": "^2.3.2",
+    "webpack-dev-middleware": "^1.10.2",
+    "webpack-hot-middleware": "^2.18.0"
   }
 }
