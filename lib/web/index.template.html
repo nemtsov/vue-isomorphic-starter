@@ -2,13 +2,8 @@
 <html>
   <head>
     <title>{{ title }}</title>
-    <!-- use triple mustache for non-HTML-escaped interpolation -->
-    {{{ renderResourceHints() }}}
-    {{{ renderStyles() }}}
   </head>
   <body>
     <!--vue-ssr-outlet-->
-    {{{ renderState() }}}
-    {{{ renderScripts() }}}
   </body>
 </html>
