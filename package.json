@@ -8,7 +8,7 @@
     "build": "rimraf dist && npm run build:client && npm run build:server",
     "build:client": "cross-env NODE_ENV=production webpack --config lib/web/build/webpack.client.config.js --progress --hide-modules",
     "build:server": "cross-env NODE_ENV=production webpack --config lib/web/build/webpack.server.config.js --progress --hide-modules",
-    "dev": "nodemon server.js",
+    "dev": "nodemon --watch lib/app.js --watch lib/core --watch lib/api --watch lib/web/resource.js --watch lib/web/build server.js",
     "lint": "eslint lib test",
     "test": "npm run lint && npm run test-cover && npm run test-check-coverage",
     "test-watch": "babel-node ./node_modules/.bin/_mocha --require should --recursive --reporter min --watch",
@@ -55,14 +55,6 @@
   "engines": {
     "node": "^8.0.0",
     "npm": "^5.0.0"
-  },
-  "babel": {
-    "plugins": [
-      "add-module-exports",
-      "transform-async-to-generator",
-      "transform-es2015-modules-commonjs",
-      "transform-object-rest-spread"
-    ]
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
