@@ -1,0 +1,23 @@
+{
+  "presets": [
+    ["env", {
+      "modules": false,
+      "exclude": ["transform-regenerator"],
+      "targets": {
+        "browsers": [
+          "last 2 Chrome versions",
+          "last 2 Edge versions",
+          "last 2 Safari versions",
+          "last 2 FF versions",
+          "last 1 IE versions",
+          "last 2 iOS versions"
+        ],
+        "uglify": true
+      }
+    }]
+  ],
+  "plugins": [
+    "syntax-dynamic-import",
+    "fast-async"
+  ]
+}
