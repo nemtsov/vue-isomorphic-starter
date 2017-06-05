@@ -36,6 +36,7 @@
     "friendly-errors-webpack-plugin": "^1.6.1",
     "jwks-rsa": "^1.1.1",
     "namespaced-console-logger": "^1.0.1",
+    "nodent-runtime": "^3.0.4",
     "pg": "^6.2.3",
     "rimraf": "^2.6.1",
     "url-loader": "^0.5.8",

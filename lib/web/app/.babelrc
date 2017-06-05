@@ -21,6 +21,8 @@
   ],
   "plugins": [
     "syntax-dynamic-import",
-    "fast-async"
+    ["fast-async", {
+      "useRuntimeModule": true
+    }]
   ]
 }
