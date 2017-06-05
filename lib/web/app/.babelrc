@@ -2,7 +2,10 @@
   "presets": [
     ["env", {
       "modules": false,
-      "exclude": ["transform-regenerator"],
+      "exclude": [
+        "transform-async-to-generator",
+        "transform-regenerator"
+      ],
       "targets": {
         "browsers": [
           "last 2 Chrome versions",
