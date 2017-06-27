@@ -1,8 +1,8 @@
 {
   "private": true,
-  "name": "saturday-project",
+  "name": "vue-isomorphic-starter",
   "version": "1.0.0",
-  "description": "Saturday Project",
+  "description": "VUE Isomorphic Starter",
   "scripts": {
     "heroku-postbuild": "npm run build",
     "build": "rimraf dist && npm run build:client && npm run build:server",

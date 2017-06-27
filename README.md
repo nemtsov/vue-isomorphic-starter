@@ -1,4 +1,6 @@
-# Saturday Project
+# VUE Isomorphic Starter
+
+This is a work in progress.
 
 ## Usage
 
