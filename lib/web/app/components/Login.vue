@@ -1,6 +1,5 @@
 <template>
   <div>
-    <div id="root" style="width: 280px; margin: 40px auto; padding: 10px;"></div>
   </div>
 </template>
 
