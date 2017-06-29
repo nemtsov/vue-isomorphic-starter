@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class="$style.app">
     <header>
       <span>SP App</span>
     </header>
@@ -16,12 +16,12 @@ export default {
 };
 </script>
 
-<style>
+<style module>
 body {
   margin: 0;
 }
 
-#app {
+.app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

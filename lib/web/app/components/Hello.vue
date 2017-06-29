@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div :class="$style.hello">
     {{ msg }}
     <div>{{ item.title }}</div>
   </div>
@@ -10,7 +10,7 @@ export default {
   name: 'hello',
 
   asyncData({ store, route }) {
-    return store.dispatch('fetchItem', route.params.id);
+    return store.dispatch('items/fetchItem', route.params.id);
   },
 
   data() {
@@ -21,14 +21,14 @@ export default {
 
   computed: {
     item () {
-      return this.$store.state.items[this.$route.params.id];
-    }
+      return this.$store.getters['items/getItem'](this.$route.params.id);
+    },
   }
 };
 </script>
 
-<style scoped>
+<style module>
 .hello {
-  font-size: 120%;
+  font-size: 130%;
 }
 </style>
