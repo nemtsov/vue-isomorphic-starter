@@ -6,8 +6,6 @@ const createBundleRenderer = require('vue-server-renderer').createBundleRenderer
 const auth = require('./auth');
 const loggers = require('../core/loggers');
 const config = require('../core/config');
-const serverBundle = require('./dist/vue-ssr-server-bundle.json');
-const clientManifest = require('./dist/vue-ssr-client-manifest.json');
 
 const router = new express.Router();
 module.exports = router;
@@ -55,11 +53,11 @@ async function handleRoute(req, res, next) {
 }
 
 if (isProd) {
-  const bundle = require('./dist/vue-ssr-server-bundle.json');
-  const clientManifest = require('./dist/vue-ssr-client-manifest.json');
-  renderer = createRenderer(bundle, { clientManifest });
+  const serverBundle = require('../../.dist/vue-ssr-server-bundle.json');
+  const clientManifest = require('../../.dist/vue-ssr-client-manifest.json');
+  renderer = createRenderer(serverBundle, { clientManifest });
 } else {
-  const setup = require('./build/setup-dev-server');
+  const setup = require('../../build/setup-dev-server');
   readyPromise = setup(router, (bundle, options) => {
     renderer = createRenderer(bundle, options);
   });
@@ -67,7 +65,7 @@ if (isProd) {
 
 auth.init(router);
 
-router.use('/dist', express.static(`${__dirname}/dist`));
+router.use('/dist', express.static(`${__dirname}/../../.dist`));
 
 router.get('/private', auth.ensureLoggedIn, wrap(handleRoute));
 router.get('*', wrap(handleRoute));
